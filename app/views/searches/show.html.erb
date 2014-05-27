@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= link_to 'Back', new_search_path %></h3>
+
+<p>
+  <strong>Keywords:</strong>
+
+</p>
+<table border="1"> 
+	<tr><th>Artist</th><th>% Matching</th></tr>
+<% @res.similar.each do |a|  %>
+    <tr><td><%=  a.name %></td><td><%= a.match %></td>
+ <% end %>
+</table>
+
